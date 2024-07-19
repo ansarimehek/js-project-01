@@ -1,0 +1,63 @@
+body {
+    background-color: aquamarine;
+}
+
+.container {
+    background-color: beige;
+    width: 40%;
+    min-width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px 0;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px(rgba(0, 0, 0, 0));
+}
+
+.timer-display {
+    position: relative;
+    width: 82%;
+    background: #fff;
+    left: 4%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50px;
+    box-shadow: 0, 0, 20px(rgba(65, 5, 145, 0.25));
+}
+
+.buttons {
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button {
+    width: 120px;
+    height: 45px;
+    background-color: aqua;
+    color: white;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font: 18px;
+    cursor: pointer;
+    outline: none;
+}
+
+.buttons button:nth-last-child(2) {
+    background-color: cadetblue;
+}
+
+.buttons button:nth-last-child(1) {
+    background-color: chocolate;
+
+}
+
+.buttons button:hover {
+    box-shadow: 0 0 20px rgba(black, );
+
+}
