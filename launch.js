@@ -1,42 +1,62 @@
-let startTime;
-let running = false;
-let laps = [];
-let lapcount = 1;
-let interval;
+window.onload = function () {
+    var seconds = `00`;
+    var tens = `00`;
+    var appendTens = document.getElementById("tens");
+    var appendSeconds = document.getElementById("seconds");
+    var btnstart = document.getElementById("btn-start");
+    var btnstop = document.getElementById("btn-stop");
+    var btnreset = document.getElementById("btn-reset");
+    var Interval;
 
-document.getElementById('btn-start').addEventListener('click', startStopwatch);
-document.getElementById('btn-stop').addEventListener('click', stopStopwatch);
-document.getElementById('btn-reset').addEventListener('click', resetStopwatch);
+    document.getElementById('btnstart').onclick = function () {
+        Interval = setInterval(startTimer, 20);
+    }
+}
 
-function startStopwatch() {
-    intervalId = setInterval(() => {
+btnstart.onclick = function () {
+    Interval = setInterval(startTimer, 20);
+}
+
+btnstop.onclick = function () {
+    clearInterval(Interval);
+
+}
+
+btnreset.onclick = function () {
+    clearInterval(Interval);
+    tens = "00";
+    seconds = "00";
+    appendTens.innerHTML = tens;
+    appendSeconds.innerHTML = seconds;
+
+}
+
+function startTimer() {
+    tens++;
+
+    if (tens <= 9) {
+        appendTens.innerHTML = "0" + tens;
+        console.log(tens + "one");
+    }
+
+    if (tens > 9) {
+        appendTens.innerHTML = tens;
+        console.log(tens + "Two");
+    }
+
+    if (tens > 99) {
+        console.log(tens + "Three");
+
         seconds++;
-        if (seconds === 60) {
-            minutes++;
-            seconds = 0;
+        appendSeconds.innerHTML = "0" + seconds;
+        tens = 0;
+        appendTens.innerHTML = "0" + 0;
+
+        if (seconds > 9) {
+            appendTens.innerHTML = tens;
+            console.log(tens + "Four");
         }
-        if (minutes === 60) {
-            hours++;
-            minutes = 0;
-        }
-        updateStopwatchDisplay();
-    }, 1000);
-}
 
-function resetStopwatch() {
-    clearInterval(intervalId);
-    hours = 0;
-    minutes = 0;
-    seconds = 0;
-    updateStopwatchDisplay();
-}
 
-function updateStopwatchDisplay() {
-    document.getElementById('hours').innerText = padZero(hours);
-    document.getElementById('minutes').innerText = padZero(minutes);
-    document.getElementById('seconds').innerText = padZero(seconds);
-}
-
-function padZero(time) {
-    return (time < 10) ? '0' + time : time;
+    }
 }
