@@ -1,0 +1,76 @@
+body {
+    background-color: bisque;
+    font-family: cursive;
+    background-size: cover;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    font-weight: 100;
+    /* font-size: xx-large; */
+    text-transform: uppercase;
+}
+
+.p {
+    font-weight: 100;
+    /* font-size: x-large; */
+    text-transform: uppercase;
+}
+
+.common-btn {
+    border-radius: 5px;
+    background: transparent;
+    color: black;
+    border: 1px solid;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    /* padding: 18px 10px; */
+    width: 180px;
+    /* margin: 10px; */
+    outline: none;
+
+}
+
+button:hover {
+    background-color: gray;
+}
+
+/* for mobile */
+@media only screen and (max-width:480px) {
+    .text {
+        font-size: xx-large;
+    }
+
+    .p {
+        font-size: x-large;
+    }
+
+    .common-btn {
+        margin: 10px;
+    }
+}
+
+
+
+/* for tab */
+@media only screen and (max-width:768px) {
+    .text{
+        font-size: 5em;
+    }
+    .p {
+        font-size: 3em;
+    }
+    .common-btn{
+        margin: 20px;
+    }
+}
+
+/* for laptop */
+@media only screen and (max-width:1024px) {}
+
+/* for desktop  */
+@media only screen and (max-width:1200px) {}
