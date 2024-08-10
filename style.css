@@ -10,13 +10,13 @@ body {
 .text {
     text-align: center;
     /*  font-weight: 100;*/
-    /* font-size: xx-large; */
-    text-transform: uppercase;
+    /* font-size: xx-large;
+    text-transform: uppercase; */
 }
 
 .p {
     font-weight: 100;
-    /* font-size: x-large; */
+    font-size: x-large;
     text-transform: uppercase;
 }
 
