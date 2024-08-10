@@ -1,6 +1,6 @@
 body {
     background-color: bisque;
-    font-family: cursive;
+    font-family: sans-serif;
     background-size: cover;
     height: 100%;
     align-items: center;
@@ -9,7 +9,7 @@ body {
 
 .text {
     text-align: center;
-    font-weight: 100;
+    /*  font-weight: 100;*/
     /* font-size: xx-large; */
     text-transform: uppercase;
 }
@@ -58,13 +58,15 @@ button:hover {
 
 /* for tab */
 @media only screen and (max-width:768px) {
-    .text{
+    .text {
         font-size: 5em;
     }
+
     .p {
         font-size: 3em;
     }
-    .common-btn{
+
+    .common-btn {
         margin: 20px;
     }
 }
