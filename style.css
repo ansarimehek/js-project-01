@@ -1,5 +1,5 @@
 body {
-    background-image: radial-gradient(to right, pink , yellow, white  );
+    background-image: linear-gradient(to right, steelblue , beige);;
     background-size: cover;
     height: 100%;
     align-items: center;
